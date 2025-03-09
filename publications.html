@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IIT Roorkee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <style>
+            ::-webkit-scrollbar {
+            width: 2px;
+            height: 2px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #001A6E;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+
+        input[type="date"]::-webkit-datetime-edit {
+            color: #172432b3; /* Change placeholder text color */
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+
+
+        select {
+            -webkit-appearance: none !important; /* Hides the arrow in WebKit-based browsers (Chrome, Safari, Edge) */
+            -moz-appearance: none !important;    /* Hides the arrow in Firefox */
+            appearance: none !important;         /* Standard property */
+            background: white !important ;
+            color: rgba(75, 85, 99, 0.7);/* Removes background if needed */
+        }
+        select option {
+            color: rgba(75, 85, 99, 0.9); /* Match placeholder text */
+            background-color: #ffffff; /* Ensure options have a white background */
+        }
+    </style>
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      primary: '#001A6E',
+                      secondary: '#074799',
+                      primaryLight: '#E1FFBB',
+                      secondaryLight: '#009990',
+
+                      white: '#FFFFFF',
+                      black: '#000000',
+                      danger: '#FF0000',
+                      success: '#28a745',
+                      warning: '#FFA500',
+                  },
+              },
+          },
+      }
+  </script>
+
+</head>
+<body class="bg-gray-200 relative"style="font-family: 'Public Sans', serif;">
+  <header class="mt-4 pb-2 border-b-[1px] border-b-gray-600">
+    <div class="w-full lg:px-8 md:px-4 px-2 flex items-center gap-4 flex justify-between">
+        <img src="images/logo.png" class="lg:h-20 md:h-20 sm:h-16 h-16 w-auto" alt="">
+      
+        <i onclick="document.getElementById('navLinks').classList.toggle('hidden')" class="fa fa-bars text-2xl text-primary lg:hidden md:hidden sm:hidden block"></i>
+    </div>
+    <div class="w-full lg:px-8 md:px-4 px-2">
+      <span class="font-[200] text-sm">Department of Biosciences and Bioengineering,
+          Indian Institute of Technology (IIT), Roorkee, India
+          </span>
+    </div>
+    <div class="flex flex-col">
+  
+      <div id="navLinks" class="w-full lg:px-8 md:px-4 px-2 mt-4 lg:flex md:flex sm:flex flex hidden  gap-4 lg:flex-row md:flex-row sm:flex-row flex-col ">
+          <a href="index.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Home</a>
+          <a href="team.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Team</a>
+          <a href="publications.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Publications</a>
+          <a href="gallery.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Gallery</a>
+          <a href="contact.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Contact</a>
+      </div>
+    </div>
+  
+</header>
+
+
+  <div class="banner mt-4">
+    <img src="images/banner.jpg" class="w-full lg:h-[400px] md:h-[400px] sm:h-[400px] h-[200px] object-cover" alt="">
+  </div>
+
+
+   <div class="py-20 px-2 flex flex-col items-center bg-white">
+           <span class="text-primary lg:text-3xl md:text-3xl sm:text-2xl text-2xl">Publications</span>
+           <div class="max-w-[1400px] flex flex-col">
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-8">
+              <strong class="font-bold">1.</strong>	Cryo-EM structure of the inhibited (10S) form of myosin II. 
+Shixin Yang*, <strong class="font-bold"><u>Prince Tiwari</u></strong>*, Kyoung Hwan Lee, Osamu Sato, Mitsuo Ikebe, Raúl Padrón and Roger Craig. Nature volume 588, pages521–525 (2020)	<strong class="font-bold"><u>(IF 69.5)
+  *Equal contribution</u></strong>
+
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-12">
+              <strong class="font-bold">2.</strong>	Dilated cardiomyopathy mutation E525K in human beta-cardiac myosin stabilizes the interacting-heads motif and super- relaxed state of myosin
+David V Rasicci, <strong class="font-semibold">Prince Tiwari</strong>, Skylar ML Bodt, Rohini Desetty, Fredrik R Sadler, Sivaraj Sivaramakrishnan, Roger Craig, Christopher M Yengo. 
+<strong class="font-bold">eLife</strong> 2022;11: e77415.  <strong class="font-bold">(IF 8.14)</strong>
+
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-12">
+              <strong class="font-bold">3.</strong>	Understanding anomalous mobility of proteins on SDS‐PAGE with special reference to the highly acidic extracellular domains of human E‐ and N‐cadherins. 
+<strong class="font-bold"><u>Prince Tiwari</u></strong>, Pallavi Kaila, and Purnananda Guptasarma. 
+<strong class="font-bold">Electrophoresis</strong> 2019, 40,1273–1281 <strong class="font-semibold">(IF 3.6)</strong>
+
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-12">
+              <strong class="font-bold">4.</strong>  Structural-Mechanical and Biochemical Functions of Classical Cadherins at Cellular Junctions: A Review and Some Hypotheses. 
+<strong class="font-bold">Prince Tiwari</strong>, Arpita Mrigwani, Harpreet Kaur, Pallavi Kaila, Rajendra Kumar, Purnananda Guptasarma. 
+
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center">
+             <i> Biochemical and Biophysical Roles of Cell Surface Molecules</i> (2018) pp 107-138, Advances in Experimental Medicine and Biology book series (AEMB, volume 1112) <strong class="font-bold">(IF 3.7)</strong>
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-12">
+              <strong class="font-bold">5.</strong>	N-terminal domain replacement changes an archaeal monoacylglycerol lipase into a triacylglycerol lipase. 
+Surabhi Soni, Sneha S. Sathe, Rutuja R. Sheth, <strong class="font-bold">Prince Tiwari</strong>, Rajesh-Kumar N. Vadgama, Annamma Anil Odaneth, Arvind M. Lali & Sanjeev K. Chandrayan 
+<strong class="font-semibold">Biotechnology for Biofuels</strong> (2019) 12:110   <strong class="font-bold">(IF 7.8)</strong>
+
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-12">
+              <strong class="font-bold">6.</strong>	Multiple thermostable enzyme hydrolases on magnetic nanoparticles: An immobilized enzyme-mediated approach to saccharification through simultaneous xylanase, cellulase and amylolytic glucanotransferase action.
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center">
+              Arpana Kumari, Pallavi Kaila, <strong class="font-bold"> Prince Tiwari</strong>, Vishal Singh, Sunaina Kaul, Nitin Singhal, and Purnananda Guptasarma. <strong class="font-bold">Int J Biol Macromol</strong> 2018 :1650-1658.  <strong class="font-bold">(IF 8.0)</strong>
+            </p>
+            <p class="font-[200]  lg:text-lg md:text-md sm:text-md text-sm text-center mt-12">
+              PDB entry: <strong class="font-bold">6XE9</strong> (Smooth muscle myosin).  <strong class="font-bold">Tiwari P</strong>., Padron R. Craig R. <strong class="font-bold">Nature (2020)</strong>
+            </p>
+           
+           </div>
+   </div>
+
+<div class="p-2">
+    <p class="font-[200]  lg:text-md md:text-md sm:text-md text-sm text-center mt-4">© 2025 by PT Lab</p>
+
+</div>
+
+</body>
+</html>
