@@ -1,10 +1,11 @@
 @extends('layouts.layout')
 @section('content')
 
-    <div class="banner mt-4">
-        <img src="{{asset('assets/images/banner.jpg')}}" class="w-full lg:h-[400px] md:h-[300px] sm:h-[300px] h-[200px] object-cover" alt="">
+    <div class="banner mt-4 relative w-full lg:h-[400px] md:h-[300px] sm:h-[300px] h-[200px] bg-black bg-blend-darken"
+         style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ asset('assets/images/banner.jpg') }}');
+            background-size: cover;
+            background-position: center;">
     </div>
-
 
     <div class="py-12 px-2 flex flex-col items-center bg-white">
         <span class="text-primary lg:text-3xl md:text-3xl sm:text-2xl text-2xl">Our Gallery</span>

@@ -5,8 +5,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IIT Roorkee</title>
+    <title>Dr. Prince Tiwari Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/smallLogo.jpg')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -101,27 +102,28 @@
 
         <i onclick="document.getElementById('navLinks').classList.toggle('hidden')" class="fa fa-bars text-2xl text-primary lg:hidden md:hidden sm:hidden block"></i>
     </div>
-    <div class="w-full lg:px-8 md:px-4 px-2">
-        <span class="font-[200] text-sm">Department of Biosciences and Bioengineering,
-            Indian Institute of Technology (IIT), Roorkee, India
-            </span>
-    </div>
-    <div class="flex flex-col">
+
+    <div class="flex flex-col mt-4">
 
         <div id="navLinks" class="w-full lg:px-8 md:px-4 px-2 mt-4 lg:flex md:flex sm:flex flex hidden  gap-4 lg:flex-row md:flex-row sm:flex-row flex-col ">
-            <a href="{{route('home')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Home</a>
-            <a href="{{route('team')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Team</a>
-            <a href="{{route('publications')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Publications</a>
-            <a href="{{route('gallery')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Gallery</a>
-            <a href="{{route('contact')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Contact</a>
+            <a href="{{route('home')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='home'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Home</a>
+            <a href="{{route('team')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='team'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Team</a>
+            <a href="{{route('publications')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='publications'?'bg-primary text-white':''}} px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Publications</a>
+            <a href="{{route('gallery')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='gallery'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Gallery</a>
+            <a href="{{route('contact')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='contact'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Contact</a>
         </div>
     </div>
 
 </header>
 
 @yield('content')
-<div class="p-2">
-    <p class="font-[200]  lg:text-md md:text-md sm:text-md text-sm text-center mt-4">© 2025 by PT Lab</p>
+<div class="p-2 flex justify-evenly flex-wrap gap-4 bg-primary">
+    <div>
+        <p class="font-[200]  lg:text-lg md:text-lg sm:text-lg text-md text-center mt-4 text-gray-200">© 2025 by <a href="{{route('home')}}" class="text-white font-bold underline">PT Lab</a></p>
+    </div>
+    <div>
+        <p class="font-[200]  lg:text-lg md:text-lg sm:text-lg text-md text-center mt-4 text-gray-200">© 2025 by <a href="https://himsoftsolution.com" class="text-white font-bold underline">Him Soft Solution</a></p>
+    </div>
 </div>
 
 </body>
