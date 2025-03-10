@@ -16,10 +16,12 @@
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <style>
-            ::-webkit-scrollbar {
+        ::-webkit-scrollbar {
             width: 2px;
             height: 2px;
         }
@@ -71,75 +73,56 @@
         }
     </style>
     <script>
-      tailwind.config = {
-          theme: {
-              extend: {
-                  colors: {
-                      primary: '#001A6E',
-                      secondary: '#074799',
-                      primaryLight: '#E1FFBB',
-                      secondaryLight: '#009990',
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#001A6E',
+                        secondary: '#074799',
+                        primaryLight: '#E1FFBB',
+                        secondaryLight: '#009990',
 
-                      white: '#FFFFFF',
-                      black: '#000000',
-                      danger: '#FF0000',
-                      success: '#28a745',
-                      warning: '#FFA500',
-                  },
-              },
-          },
-      }
-  </script>
+                        white: '#FFFFFF',
+                        black: '#000000',
+                        danger: '#FF0000',
+                        success: '#28a745',
+                        warning: '#FFA500',
+                    },
+                },
+            },
+        }
+    </script>
 
 </head>
 <body class="bg-gray-200 relative"style="font-family: 'Public Sans', serif;">
-  <header class="mt-4 pb-2 border-b-[1px] border-b-gray-600">
+<header class="mt-4 pb-2 border-b-[1px] border-b-gray-600">
     <div class="w-full lg:px-8 md:px-4 px-2 flex items-center gap-4 flex justify-between">
-        <img src="images/logo.png" class="lg:h-20 md:h-20 sm:h-16 h-16 w-auto" alt="">
-      
+        <img src="{{asset('assets/images/logo.png')}}" class="lg:h-20 md:h-20 sm:h-16 h-16 w-auto" alt="">
+
         <i onclick="document.getElementById('navLinks').classList.toggle('hidden')" class="fa fa-bars text-2xl text-primary lg:hidden md:hidden sm:hidden block"></i>
     </div>
     <div class="w-full lg:px-8 md:px-4 px-2">
-      <span class="font-[200] text-sm">Department of Biosciences and Bioengineering,
-          Indian Institute of Technology (IIT), Roorkee, India
-          </span>
+        <span class="font-[200] text-sm">Department of Biosciences and Bioengineering,
+            Indian Institute of Technology (IIT), Roorkee, India
+            </span>
     </div>
     <div class="flex flex-col">
-  
-      <div id="navLinks" class="w-full lg:px-8 md:px-4 px-2 mt-4 lg:flex md:flex sm:flex flex hidden  gap-4 lg:flex-row md:flex-row sm:flex-row flex-col ">
-          <a href="index.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Home</a>
-          <a href="team.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Team</a>
-          <a href="publications.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Publications</a>
-          <a href="gallery.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Gallery</a>
-          <a href="contact.html" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Contact</a>
-      </div>
+
+        <div id="navLinks" class="w-full lg:px-8 md:px-4 px-2 mt-4 lg:flex md:flex sm:flex flex hidden  gap-4 lg:flex-row md:flex-row sm:flex-row flex-col ">
+            <a href="{{route('home')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Home</a>
+            <a href="{{route('team')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Team</a>
+            <a href="{{route('publications')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Publications</a>
+            <a href="{{route('gallery')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Gallery</a>
+            <a href="{{route('contact')}}" class="text-black text-sm font-[300] hover:text-primary transition ease-in duration-2000">Contact</a>
+        </div>
     </div>
-  
+
 </header>
 
-
-   <div class="banner mt-4">
-     <img src="images/banner.jpg" class="w-full lg:h-[400px] md:h-[300px] sm:h-[300px] h-[200px] object-cover" alt="">
-   </div>
-
-
-   <div class="py-12 px-2 flex flex-col items-center bg-white">
-           <span class="text-primary lg:text-3xl md:text-3xl sm:text-2xl text-2xl">Our Gallery</span>
-           <div class="max-w-[1600px] grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-6 gap-6">
-              <div class="w-full h-64">
-                 <img src="images/banner.jpg" class="h-full w-full object-cover rounded-[3px]" alt="">
-              </div>
-              <div class="w-full h-64">
-                 <img src="images/banner2.png" class="h-full w-full object-cover rounded-[3px]" alt="">
-              </div>
-      
-           </div>
-   </div>
-
-   
-   <div class="p-2">
+@yield('content')
+<div class="p-2">
     <p class="font-[200]  lg:text-md md:text-md sm:text-md text-sm text-center mt-4">© 2025 by PT Lab</p>
-
 </div>
+
 </body>
 </html>
