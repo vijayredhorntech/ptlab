@@ -10,8 +10,7 @@
     <link rel="icon" type="image/x-icon" href="{{asset('assets/images/smallLogo.jpg')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -21,6 +20,8 @@
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     <style>
         ::-webkit-scrollbar {
             width: 2px;
@@ -95,29 +96,32 @@
     </script>
 
 </head>
-<body class="bg-gray-200 relative"style="font-family: 'Public Sans', serif;">
-<header class="mt-4 pb-2 border-b-[1px] border-b-gray-600">
-    <div class="w-full lg:px-8 md:px-4 px-2 flex items-center gap-4 flex justify-between">
-        <img src="{{asset('assets/images/logo.png')}}" class="lg:h-20 md:h-20 sm:h-16 h-16 w-auto" alt="">
-
-        <i onclick="document.getElementById('navLinks').classList.toggle('hidden')" class="fa fa-bars text-2xl text-primary lg:hidden md:hidden sm:hidden block"></i>
+<body class="bg-gray-200 relative"style="font-family: 'Montserrat', serif;">
+<header class=" sticky top-0 z-50 bg-gray-200 shadow-lg shadow-gray-600/30 flex justify-between items-center py-4">
+    <div class="w-max lg:px-8 md:px-4 px-2 flex items-center gap-4 flex justify-between">
+        <img src="{{asset('assets/images/logo.png')}}" class=" xl:h-16 lg:h-12 md:h-12 sm:h-12 h-12 w-auto" alt="">
     </div>
+    <div class="flex flex-col justify-center xl:static lg:static absolute top-[100%] left-0 xl:w-max lg:w-max w-full bg-gray-200">
 
-    <div class="flex flex-col mt-4">
-
-        <div id="navLinks" class="w-full lg:px-8 md:px-4 px-2 mt-4 lg:flex md:flex sm:flex flex hidden  gap-4 lg:flex-row md:flex-row sm:flex-row flex-col ">
-            <a href="{{route('home')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='home'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Home</a>
-            <a href="{{route('team')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='team'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Team</a>
-            <a href="{{route('publications')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='publications'?'bg-primary text-white':''}} px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Publications</a>
-            <a href="{{route('gallery')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='gallery'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Gallery</a>
-            <a href="{{route('contact')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='contact'?'bg-primary text-white':''}}  px-4 py-0.5 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Contact</a>
+        <div id="navLinks" class="w-full lg:px-8 md:px-4 px-2 xl:flex lg:flex flex hidden gap-1 xl:flex-row lg:flex-row flex-col ">
+            <a href="{{route('home')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='home'?'bg-primary text-white':''}}  xl:px-6 xl:py-2.5 lg:px-3 lg:py-0.5 md:px-4 md:py-3 px-4 py-2 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Home</a>
+            <a href="{{route('team')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='team'?'bg-primary text-white':''}}  xl:px-6 xl:py-2.5 lg:px-3 lg:py-0.5 md:px-4 md:py-3 px-4 py-2 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Members</a>
+            <a href="{{route('publications')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='publications'?'bg-primary text-white':''}}  xl:px-6 xl:py-2.5 lg:px-3 lg:py-0.5 md:px-4 md:py-3 px-4 py-2 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Publications</a>
+            <a href="{{route('gallery')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='gallery'?'bg-primary text-white':''}}  xl:px-6 xl:py-2.5 lg:px-3 lg:py-0.5 md:px-4 md:py-3 px-4 py-2 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Gallery</a>
+            <a href="{{route('contact')}}" class="text-black text-md font-semibold {{Route::currentRouteName()==='contact'?'bg-primary text-white':''}}  xl:px-6 xl:py-2.5 lg:px-3 lg:py-0.5 md:px-4 md:py-3 px-4 py-2 rounded-[3px] hover:text-white hover:bg-primary transition ease-in duration-2000">Contact Us</a>
         </div>
     </div>
+
+    <div class="text-primary xl:hidden lg:hidden flex items-center px-4">
+        <i onclick="document.getElementById('navLinks').classList.toggle('hidden')" class="fa fa-bars text-2xl"></i>
+
+    </div>
+
 
 </header>
 
 @yield('content')
-<div class="p-2 flex justify-evenly flex-wrap gap-4 bg-primary">
+<div class="px-2 flex justify-evenly flex-wrap gap-4 bg-primary">
     <div>
         <p class="font-[200]  lg:text-lg md:text-lg sm:text-lg text-md text-center mt-4 text-gray-200">© 2025 by <a href="{{route('home')}}" class="text-white font-bold underline">PT Lab</a></p>
     </div>

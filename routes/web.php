@@ -5,7 +5,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 })->name('home');
-Route::get('/team', function () {
+Route::get('/aboutPI', function () {
+    return view('aboutPI');
+})->name('aboutPI');
+Route::get('/members', function () {
     return view('team');
 })->name('team');
 Route::get('/publications', function () {
